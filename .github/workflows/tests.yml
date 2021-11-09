@@ -33,7 +33,7 @@ jobs:
         needs: |
           website
           coverage
-      run: |
+    - run: |
         library(sampleRpkg)
         start_app()
 
