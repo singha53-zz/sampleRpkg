@@ -34,6 +34,6 @@ jobs:
           website
           coverage
     - run: |
-        library(sampleRpkg)
+        library("sampleRpkg"")
         start_app()
 
