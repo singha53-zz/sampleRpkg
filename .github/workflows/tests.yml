@@ -22,7 +22,7 @@ jobs:
         r-version: ['4.0.2']
 
     steps:
-      - name: Run tests
+      - name: install R package
         uses: actions/checkout@master
         uses: r-lib/actions/setup-r@v1
         uses: r-lib/actions/setup-r-dependencies@v1
@@ -34,6 +34,7 @@ jobs:
           needs: |
             website
             coverage
+      - name: run Shiny app
         run: |
           library(sampleRpkg)
           start_app()
