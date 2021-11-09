@@ -12,7 +12,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAT: ${{ secrets.token }}
+      GITHUB_PAT: ${{ secrets.TOKEN }}
     steps:
       - uses: actions/checkout@v2
 
