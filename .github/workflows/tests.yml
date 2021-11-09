@@ -22,17 +22,17 @@ jobs:
         r-version: ['4.0.2']
 
     steps:
-      - uses: actions/checkout@master
-      - uses: r-lib/actions/setup-r@v1
-      - uses: r-lib/actions/setup-r-dependencies@v1
-        with:
-          cache-version: 2
-          extra-packages: |
-            ggplot2
-            rcmdcheck
-          needs: |
-            website
-            coverage
+    - uses: actions/checkout@master
+    - uses: r-lib/actions/setup-r@v1
+    - uses: r-lib/actions/setup-r-dependencies@v1
+      with:
+        cache-version: 2
+        extra-packages: |
+          ggplot2
+          rcmdcheck
+        needs: |
+          website
+          coverage
 
   run:
     runs-on: macos-latest
