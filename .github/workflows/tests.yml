@@ -43,7 +43,7 @@ jobs:
     needs: build
     steps:
     - name: Run Shiny app
-    run: |
-      library(sampleRpkg)
-      start_app()
+      run: |
+        library(sampleRpkg)
+        start_app()
 
