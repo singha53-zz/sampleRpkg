@@ -10,7 +10,44 @@ Authors@R:
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
+Imports:
+    assertthat,
+    attempt,
+    c212,
+    config,
+    data.table,
+    DescTools,
+    dplyr,
+    DT,
+    htmltools,
+    glue,
+    haven,
+    processx,
+    metafor,
+    plyr,
+    pkgload,
+    plotly,
+    RCurl,
+    shiny,
+    shinyalert,
+    shinydashboard,
+    shinyWidgets,
+    shinyjs,
+    shinycssloaders,
+    scales,
+    stringr,
+    tidyr
 Encoding: UTF-8
 LazyData: true
-Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://by-gitlab.de.bayer.cnb/GLVOO/DetectoR
+BugReports: https://by-gitlab.de.bayer.cnb/GLVOO/DetectoR/issues
+Suggests: 
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    shinytest
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Depends: 
+    R (>= 4.0)
