@@ -1,6 +1,5 @@
 #' start webapp
 #'
-#' @param ... passed to \link[shiny]{runApp}
 #' @export
 #' @rdname startApplication
 start_app <- function() {

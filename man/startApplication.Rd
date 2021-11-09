@@ -6,9 +6,6 @@
 \usage{
 start_app()
 }
-\arguments{
-\item{...}{passed to \link[shiny]{runApp}}
-}
 \description{
 start webapp
 }
