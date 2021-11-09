@@ -22,10 +22,9 @@ jobs:
         r-version: ['4.0.2']
 
     steps:
-      - name: install R package
-        uses: actions/checkout@master
-        uses: r-lib/actions/setup-r@v1
-        uses: r-lib/actions/setup-r-dependencies@v1
+      - uses: actions/checkout@master
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-r-dependencies@v1
         with:
           cache-version: 2
           extra-packages: |
@@ -34,8 +33,16 @@ jobs:
           needs: |
             website
             coverage
-      - name: run Shiny app
-        run: |
-          library(sampleRpkg)
-          start_app()
+
+  run:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        r-version: ['4.0.2']
+
+    steps:
+      - name: Run Shiny app
+      run: |
+        library(sampleRpkg)
+        start_app()
 
