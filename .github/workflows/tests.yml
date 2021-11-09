@@ -34,15 +34,16 @@ jobs:
           website
           coverage
 
-  run:
+  run_shiny_app:
     runs-on: macos-latest
     strategy:
       matrix:
         r-version: ['4.0.2']
 
+    needs: build
     steps:
-      - name: Run Shiny app
-      run: |
-        library(sampleRpkg)
-        start_app()
+    - name: Run Shiny app
+    run: |
+      library(sampleRpkg)
+      start_app()
 
